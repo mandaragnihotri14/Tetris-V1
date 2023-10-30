@@ -63,18 +63,13 @@ data "aws_subnets" "public_subnets" {
   }
 }
 
-data "aws_subnet" "example" {
-  for_each = toset(data.aws_subnets.public_subnets.ids)
-  id       = each.value
-}
-
 #cluster provision
 resource "aws_eks_cluster" "example" {
   name     = "EKS_CLOUD"
   role_arn = aws_iam_role.example.arn
 
   vpc_config {
-    subnet_ids = [data.aws_subnet.example.ids]
+    subnet_ids = tolist(data.aws_subnets.public_subnets.ids)
   }
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Cluster handling.
