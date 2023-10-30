@@ -64,7 +64,7 @@ data "aws_subnets" "public_subnets" {
 }
 
 data "aws_subnet" "example" {
-  for_each = toset(data.aws_subnets.public_subnets.ids)
+  for_each = toset(data.aws_subnets.public_subnets.id)
   id       = each.value
 }
 
