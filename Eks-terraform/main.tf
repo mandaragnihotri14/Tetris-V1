@@ -59,7 +59,7 @@ data "aws_vpc" "main" {
 data "aws_subnets" "public_subnets" {
   filter {
     name   = "vpc-id"
-    values = [data.aws_vpc.main.ids] 
+    values = [data.aws_vpc.main.id] 
   }
 }
 
