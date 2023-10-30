@@ -59,12 +59,12 @@ data "aws_vpc" "main" {
 data "aws_subnets" "public_subnets" {
   filter {
     name   = "vpc-id"
-    values = [data.aws_vpc.main.id] 
+    values = [data.aws_vpc.main.ids] 
   }
 }
 
 data "aws_subnet" "example" {
-  for_each = toset(data.aws_subnets.public_subnets.id)
+  for_each = toset(data.aws_subnets.public_subnets.ids)
   id       = each.value
 }
 
