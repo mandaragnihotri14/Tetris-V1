@@ -1,34 +1,34 @@
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: tetris
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: tetris
-  template:
-    metadata:
-      labels:
-        app: tetris
-    spec:
-      containers:
-      - name: tetris
-        image: magnihotri/tetrisv1:replaceImageTag
-        ports:
-        - containerPort: 3000   # Use port 3000
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: tetris-service
-spec:
-  selector:
-    app: tetris
-  ports:
-  - protocol: TCP
-    port: 80                 # Expose port 80
-    targetPort: 3000
-  type: LoadBalancer
+8-8-8-8
+8a8p8i8V8e8r8s8i8o8n8 8a8p8p8s8/8v818
+8k8i8n8d8 8D8e8p8l8o8y8m8e8n8t8
+8m8e8t8a8d8a8t8a8
+8 8 8n8a8m8e8 8t8e8t8r8i8s8
+8s8p8e8c8
+8 8 8r8e8p8l8i8c8a8s8 838
+8 8 8s8e8l8e8c8t8o8r8
+8 8 8 8 8m8a8t8c8h8L8a8b8e8l8s8
+8 8 8 8 8 8 8a8p8p8 8t8e8t8r8i8s8
+8 8 8t8e8m8p8l8a8t8e8
+8 8 8 8 8m8e8t8a8d8a8t8a8
+8 8 8 8 8 8 8l8a8b8e8l8s8
+8 8 8 8 8 8 8 8 8a8p8p8 8t8e8t8r8i8s8
+8 8 8 8 8s8p8e8c8
+8 8 8 8 8 8 8c8o8n8t8a8i8n8e8r8s8
+8 8 8 8 8 8 8-8 8n8a8m8e8 8t8e8t8r8i8s8
+8 8 8 8 8 8 8 8 8i8m8a8g8e8 8m8a8g8n8i8h8o8t8r8i8/8t8e8t8r8i8s8v818r8e8p8l8a8c8e8I8m8a8g8e8T8a8g8
+8 8 8 8 8 8 8 8 8p8o8r8t8s8
+8 8 8 8 8 8 8 8 8-8 8c8o8n8t8a8i8n8e8r8P8o8r8t8 838080808 8 8 8#8 8U8s8e8 8p8o8r8t8 838080808
+8
+8-8-8-8
+8a8p8i8V8e8r8s8i8o8n8 8v818
+8k8i8n8d8 8S8e8r8v8i8c8e8
+8m8e8t8a8d8a8t8a8
+8 8 8n8a8m8e8 8t8e8t8r8i8s8-8s8e8r8v8i8c8e8
+8s8p8e8c8
+8 8 8s8e8l8e8c8t8o8r8
+8 8 8 8 8a8p8p8 8t8e8t8r8i8s8
+8 8 8p8o8r8t8s8
+8 8 8-8 8p8r8o8t8o8c8o8l8 8T8C8P8
+8 8 8 8 8p8o8r8t8 88808 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8#8 8E8x8p8o8s8e8 8p8o8r8t8 88808
+8 8 8 8 8t8a8r8g8e8t8P8o8r8t8 838080808
+8 8 8t8y8p8e8 8L8o8a8d8B8a8l8a8n8c8e8r8
